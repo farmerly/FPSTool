@@ -8,12 +8,12 @@
 pod 'FPSTool'
 ```
 
-#使用方式
+# 使用方式
 ```
 [FPSTool sharedInstall]
 ```
 
->在AppDelegate中
+# AppDelegate中
 
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
