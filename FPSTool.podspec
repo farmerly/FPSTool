@@ -90,7 +90,7 @@ TODO:实时查看页面FPS
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "FPSTool", "FPSTool/**/*.{h,m}" 
+  s.source_files  = "FPS" 
 
   # s.public_header_files = "Classes/**/*.h"
 

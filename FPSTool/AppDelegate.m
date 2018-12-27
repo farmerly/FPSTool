@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FPS/FPS.h"
+#import "FPS.h"
 #import "ViewController.h"
 @interface AppDelegate ()
 

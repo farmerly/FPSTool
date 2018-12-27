@@ -13,7 +13,7 @@
 		ED9F30AD21D481FB005B9AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9F30AC21D481FB005B9AE7 /* Assets.xcassets */; };
 		ED9F30B021D481FB005B9AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9F30AE21D481FB005B9AE7 /* LaunchScreen.storyboard */; };
 		ED9F30B321D481FB005B9AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9F30B221D481FB005B9AE7 /* main.m */; };
-		ED9F30BC21D48202005B9AE7 /* FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9F30BB21D48202005B9AE7 /* FPS.m */; };
+		ED9F30C021D48ACA005B9AE7 /* FPS.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9F30BF21D48ACA005B9AE7 /* FPS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +27,8 @@
 		ED9F30AF21D481FB005B9AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED9F30B121D481FB005B9AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED9F30B221D481FB005B9AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		ED9F30BA21D48202005B9AE7 /* FPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPS.h; sourceTree = "<group>"; };
-		ED9F30BB21D48202005B9AE7 /* FPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPS.m; sourceTree = "<group>"; };
+		ED9F30BE21D48ACA005B9AE7 /* FPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPS.h; sourceTree = "<group>"; };
+		ED9F30BF21D48ACA005B9AE7 /* FPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		ED9F30A221D481FB005B9AE7 /* FPSTool */ = {
 			isa = PBXGroup;
 			children = (
-				ED9F30B921D48202005B9AE7 /* FPS */,
+				ED9F30BD21D48ACA005B9AE7 /* FPS */,
 				ED9F30A321D481FB005B9AE7 /* AppDelegate.h */,
 				ED9F30A421D481FB005B9AE7 /* AppDelegate.m */,
 				ED9F30A621D481FB005B9AE7 /* ViewController.h */,
@@ -75,14 +75,14 @@
 			path = FPSTool;
 			sourceTree = "<group>";
 		};
-		ED9F30B921D48202005B9AE7 /* FPS */ = {
+		ED9F30BD21D48ACA005B9AE7 /* FPS */ = {
 			isa = PBXGroup;
 			children = (
-				ED9F30BA21D48202005B9AE7 /* FPS.h */,
-				ED9F30BB21D48202005B9AE7 /* FPS.m */,
+				ED9F30BE21D48ACA005B9AE7 /* FPS.h */,
+				ED9F30BF21D48ACA005B9AE7 /* FPS.m */,
 			);
 			path = FPS;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9F30A821D481FB005B9AE7 /* ViewController.m in Sources */,
-				ED9F30BC21D48202005B9AE7 /* FPS.m in Sources */,
+				ED9F30C021D48ACA005B9AE7 /* FPS.m in Sources */,
 				ED9F30B321D481FB005B9AE7 /* main.m in Sources */,
 				ED9F30A521D481FB005B9AE7 /* AppDelegate.m in Sources */,
 			);
