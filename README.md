@@ -4,13 +4,13 @@
 
 >pod 
 
-pod 'FPSTool'
+(```)pod 'FPSTool'(```)
 
-#最简单的使用方式
-[FPSTool sharedInstall]
+#使用方式
+(```)[FPSTool sharedInstall](```)
 
 >在AppDelegate中
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+(```)- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -21,4 +21,4 @@ pod 'FPSTool'
     
     [FPSTool sharedInstall];
     return YES;
-}
+}(```)
