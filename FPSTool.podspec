@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/farmerly/FPSTool.git', :tag => s.version.to_s }
   
   s.requires_arc = true
-  s.source_files = 'FPSTool/**/*.{h,m}'
+  s.source_files = 'FPSTool/**/*'
+  s.frameworks = 'UIKit'
 
 end
