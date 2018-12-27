@@ -4,18 +4,18 @@
 
 >pod 
 
-(```)
+```
 pod 'FPSTool'
-(```)
+```
 
 #使用方式
-(```)
+```
 [FPSTool sharedInstall]
-(```)
+```
 
 >在AppDelegate中
 
-(```)
+```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
@@ -28,4 +28,4 @@ pod 'FPSTool'
     [FPSTool sharedInstall];
     return YES;
 }
-(```)
+```
