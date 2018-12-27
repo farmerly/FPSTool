@@ -29,3 +29,4 @@ pod 'FPSTool'
     return YES;
 }
 ```
+![示例图](https://github.com/farmerly/FPSTool/blob/master/zz.gif "示例图")
