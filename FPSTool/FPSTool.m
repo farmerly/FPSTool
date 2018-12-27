@@ -1,29 +1,29 @@
 //
-//  FPS.m
-//  fps
+//  FPSTool.m
+//  FPSTool
 //
 //  Created by pnc20171013 on 2018/12/26.
 //  Copyright © 2018年 farmerly.Inc. All rights reserved.
 //
 
-#import "FPS.h"
+#import "FPSTool.h"
 
-#define fps_screenW  [UIScreen mainScreen].bounds.size.width
-#define fps_screenH  [UIScreen mainScreen].bounds.size.height
+#define FPSTool_screenW  [UIScreen mainScreen].bounds.size.width
+#define FPSTool_screenH  [UIScreen mainScreen].bounds.size.height
 
-@implementation FPS
+@implementation FPSTool
 {
     CADisplayLink *_link;
     NSUInteger _count;
     NSTimeInterval _lastTime;
 }
-static FPS *_sharedFps = nil;
+static FPSTool *_sharedFPSTool = nil;
 + (instancetype)sharedInstall {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedFps = [[self alloc] initWithFrame:CGRectMake(0, 100, 80, 30)];
+        _sharedFPSTool = [[self alloc] initWithFrame:CGRectMake(0, 100, 80, 30)];
     });
-    return _sharedFps;
+    return _sharedFPSTool;
 }
 
 
@@ -58,13 +58,13 @@ static FPS *_sharedFps = nil;
     NSTimeInterval delta = link.timestamp - _lastTime;
     if (delta < 1) return;
     _lastTime = link.timestamp;
-    float fps = _count / delta;
+    float FPSTool = _count / delta;
     _count = 0;
     
-    CGFloat progress = fps / 60.0;
+    CGFloat progress = FPSTool / 60.0;
     UIColor *color = [UIColor colorWithHue:0.27 * (progress - 0.2) saturation:1 brightness:0.9 alpha:1];
     
-    NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d FPS",(int)round(fps)]];
+    NSMutableAttributedString *attText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d FPSTool",(int)round(FPSTool)]];
     
     [attText addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, attText.length - 3)];
     [attText addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(attText.length - 3, 3)];
@@ -95,17 +95,17 @@ static FPS *_sharedFps = nil;
         
         CGRect frame = self.frame;
         
-        if (self.center.x <= fps_screenW / 2.0){
+        if (self.center.x <= FPSTool_screenW / 2.0){
             frame.origin.x = 0;
         }else
         {
-            frame.origin.x = fps_screenW - frame.size.width;
+            frame.origin.x = FPSTool_screenW - frame.size.width;
         }
         
         if (frame.origin.y < 20) {
             frame.origin.y = 20;
-        } else if (frame.origin.y + frame.size.height > fps_screenH) {
-            frame.origin.y = fps_screenH - frame.size.height;
+        } else if (frame.origin.y + frame.size.height > FPSTool_screenH) {
+            frame.origin.y = FPSTool_screenH - frame.size.height;
         }
         
         [UIView animateWithDuration:0.3 animations:^{
@@ -119,7 +119,7 @@ static FPS *_sharedFps = nil;
 
 - (CGRect)changeXWithFrame:(CGRect)originalFrame point:(CGPoint)point{
     BOOL q1 = originalFrame.origin.x >= 0;
-    BOOL q2 = originalFrame.origin.x + originalFrame.size.width <= fps_screenW;
+    BOOL q2 = originalFrame.origin.x + originalFrame.size.width <= FPSTool_screenW;
     
     if (q1 && q2) {
         originalFrame.origin.x += point.x;
@@ -130,7 +130,7 @@ static FPS *_sharedFps = nil;
 - (CGRect)changeYWithFrame:(CGRect)originalFrame point:(CGPoint)point{
     
     BOOL q1 = originalFrame.origin.y >= 20;
-    BOOL q2 = originalFrame.origin.y + originalFrame.size.height <= fps_screenH;
+    BOOL q2 = originalFrame.origin.y + originalFrame.size.height <= FPSTool_screenH;
     if (q1 && q2) {
         originalFrame.origin.y += point.y;
     }

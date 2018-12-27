@@ -1,6 +1,6 @@
 //
-//  FPS.h
-//  fps
+//  FPSTool.h
+//  FPSTool
 //
 //  Created by pnc20171013 on 2018/12/26.
 //  Copyright © 2018年 farmerly.Inc. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FPS : UIButton
+@interface FPSTool : UIButton
 
 + (instancetype)sharedInstall;
 

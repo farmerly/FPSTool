@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FPS.h"
+#import "FPSTool.h"
 #import "ViewController.h"
 @interface AppDelegate ()
 
@@ -23,7 +23,7 @@
     self.window.rootViewController = [ViewController new];
     [self.window makeKeyAndVisible];
     
-    [FPS sharedInstall];
+    [FPSTool sharedInstall];
     
     return YES;
 }
